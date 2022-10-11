@@ -1,1 +1,62 @@
+button:hover {
+    color: ghostwhite;
+    transition: 2s;
+}
 
+.caption {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+  
+.captionimg {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 2s ease-out;
+}
+  
+.caption:hover .overlay {
+    transform: translateY(0);
+}
+  
+.overlaytitle {
+    margin: 0;
+    text-align: left;
+    padding: 0 0 12px;
+    transform: translateY(calc(-100% - 10px));
+    transition: transform 2s ease-out;
+}
+  
+.caption:hover .overlaytitle {
+    transform: translateY(0);
+    transition: transform 2s ease-out;
+
+}
+  
+.caption::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+}
+  
+.caption:hover::before {
+    background: cornflowerblue;
+    transition: transform 2s ease-out;
+
+}
